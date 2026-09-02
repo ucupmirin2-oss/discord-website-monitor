@@ -1,0 +1,23 @@
+{
+  "name": "discord-website-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Discord bot untuk monitoring uptime banyak website, berjalan di Vercel Serverless + Vercel Cron, tanpa database.",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "register": "node scripts/register-commands.js",
+    "register:global": "node scripts/register-commands.js --global",
+    "unregister": "node scripts/register-commands.js --clear",
+    "check": "node scripts/local-check.js",
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@vercel/functions": "^1.5.0",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  }
+}
